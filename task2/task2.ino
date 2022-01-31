@@ -19,12 +19,12 @@ void loop() {
   
   if ((millis() - lastTime >= waitTime) && !btn.getState()){
     lastTime = millis();
-
+    //using millis instead of delay for blinking
     if (i == 6){
       i = 0;
     }
     
-    PORTB ^= (1 << i);
+    PORTB ^= (1 << i); //flipping the state of the pin;
     i++;
   }
 }

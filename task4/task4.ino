@@ -28,9 +28,11 @@ void loop()
   int x = map(distance, 0, 100, 0, 6);
   for (int i = 8; i <= 8+x; i++){
     digitalWrite(i, HIGH);
+    //switching on leds acc. to the dist
   }
   for (int i = 13; i >= 8+x; i--){
     digitalWrite(i, LOW);
+    //switching leds off if dist. decreased
   }
   Serial.println(distance);
   delay(100);

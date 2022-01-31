@@ -1,4 +1,4 @@
-#define btn 7
+#define btn 0
 #define led 13
 void setup() {
   pinMode(btn, INPUT_PULLUP);
